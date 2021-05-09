@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { NgModule } from '@angular/core';
+import { MaterialSharedModule } from '../../shared/material-shared/material-shared.module';
 import { SalaryCalculatorRoutingModule } from './salary-calculator-routing.module';
 import { SalaryCalculatorComponent } from './salary-calculator.component';
 
@@ -11,7 +11,8 @@ import { SalaryCalculatorComponent } from './salary-calculator.component';
   ],
   imports: [
     CommonModule,
-    SalaryCalculatorRoutingModule
+    SalaryCalculatorRoutingModule,
+    MaterialSharedModule
   ]
 })
 export class SalaryCalculatorModule { }
