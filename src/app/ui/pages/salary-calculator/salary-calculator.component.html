@@ -1,36 +1,31 @@
-<p>salary-calculator works!</p>
+<div>
+  <div>
+    <mat-form-field>
+      <mat-label>Anual net salary</mat-label>
+      <input
+      matInput
+      [formControl]="anualNetSalary"
+      placeholder="Anual net salary"
+      />
+    </mat-form-field>
+  </div>
 
-<mat-card>
-  <p>
-    <mat-form-field appearance="legacy">
-      <mat-label>Legacy form field</mat-label>
-      <input matInput placeholder="Placeholder" />
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
+  <div>
+    <mat-form-field>
+      <mat-label>Anual payments</mat-label>
+      <mat-select [formControl]="anualPayments">
+        <mat-option [value]="12">12</mat-option>
+        <mat-option [value]="14">14</mat-option>
+      </mat-select>
     </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="standard">
-      <mat-label>Standard form field</mat-label>
-      <input matInput placeholder="Placeholder" />
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="fill">
-      <mat-label>Fill form field</mat-label>
-      <input matInput placeholder="Placeholder" />
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Outline form field</mat-label>
-      <input matInput placeholder="Placeholder" />
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </p>
-</mat-card>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+<div>
+  Anual net salary: {{ anualNetSalary.value }}
+</div>
+<mat-divider></mat-divider>
+<div>
+  Anual payments: {{ anualPayments.value }}
+</div>

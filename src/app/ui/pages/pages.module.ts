@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
 import { MaterialSharedModule } from '../shared/material-shared/material-shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { MaterialSharedModule } from '../shared/material-shared/material-shared.
   imports: [
     CommonModule,
     PagesRoutingModule,
+    ReactiveFormsModule,
     MaterialSharedModule
   ]
 })

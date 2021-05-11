@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-salary-calculator',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./salary-calculator.component.scss']
 })
 export class SalaryCalculatorComponent implements OnInit {
+
+  anualNetSalary: FormControl = new FormControl('');
+
+  anualPayments: FormControl = new FormControl('');
 
   constructor() { }
 
