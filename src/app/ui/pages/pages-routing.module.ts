@@ -6,11 +6,6 @@ const routes: Routes = [
   {
     path: '',
     component: PagesComponent,
-    children: [
-      {path: 'calculator', loadChildren: () => import('./salary-calculator/salary-calculator.module').then(m => m.SalaryCalculatorModule)},
-      {path: '', pathMatch: 'full', redirectTo: 'calculator'},
-      {path: '**', redirectTo: 'calculator'}
-    ]
   },
 ];
 
