@@ -1,31 +1,32 @@
 <div>
-  <div>
-    <mat-form-field>
-      <mat-label>Anual net salary</mat-label>
-      <input
-      matInput
-      [formControl]="anualNetSalary"
-      placeholder="Anual net salary"
-      />
-    </mat-form-field>
-  </div>
 
-  <div>
-    <mat-form-field>
-      <mat-label>Anual payments</mat-label>
-      <mat-select [formControl]="anualPayments">
-        <mat-option [value]="12">12</mat-option>
-        <mat-option [value]="14">14</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
+  <form [formGroup]="salaryCalculatorFormGroup">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Anual net salary</mat-label>
+        <input
+          matInput
+          formControlName="annualNetSalary"
+          placeholder="Anual net salary"
+        />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Anual payments</mat-label>
+        <mat-select formControlName="annualPayments">
+          <mat-option [value]="12">12</mat-option>
+          <mat-option [value]="14">14</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+
 </div>
 
 <mat-divider></mat-divider>
 <div>
-  Anual net salary: {{ anualNetSalary.value }}
-</div>
-<mat-divider></mat-divider>
-<div>
-  Anual payments: {{ anualPayments.value }}
+  Salary calculator state:
+  <pre>{{ salaryCalculatorService.salaryCalculatorState$ | async | json}}</pre>
 </div>
