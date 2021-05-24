@@ -33,7 +33,10 @@ export class SalaryCalculatorComponent implements OnInit {
       });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // Dummy subscription to make localstorage pipe work
+    this.salaryCalculatorService.salaryCalculatorState$.subscribe();
+  }
 
   private initializeFormFromState(): void {
     this.salaryCalculatorService.salaryCalculatorState$.pipe(first()).subscribe((initialState: SalaryCalculatorState) => {

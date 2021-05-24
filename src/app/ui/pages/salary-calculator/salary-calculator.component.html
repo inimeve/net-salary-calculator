@@ -1,32 +1,30 @@
-<div>
-
-  <form [formGroup]="salaryCalculatorFormGroup">
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Anual net salary</mat-label>
-        <input
-          matInput
-          formControlName="annualNetSalary"
-          placeholder="Anual net salary"
-        />
-      </mat-form-field>
-    </div>
-
-    <div>
-      <mat-form-field appearance="outline">
-        <mat-label>Anual payments</mat-label>
-        <mat-select formControlName="annualPayments">
-          <mat-option [value]="12">12</mat-option>
-          <mat-option [value]="14">14</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
+<mat-card class="data-input-container">
+  <form [formGroup]="salaryCalculatorFormGroup" class="form-container">
+    <mat-form-field appearance="outline" class="form-input">
+      <mat-label>Anual net salary</mat-label>
+      <input
+        matInput
+        formControlName="annualNetSalary"
+        placeholder="Anual net salary"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-input">
+      <mat-label>Anual payments</mat-label>
+      <mat-select formControlName="annualPayments">
+        <mat-option [value]="12">12</mat-option>
+        <mat-option [value]="14">14</mat-option>
+      </mat-select>
+    </mat-form-field>
   </form>
 
-</div>
+  <div class="button-container">
+    <button mat-stroked-button class="calculate-button">CALCULATE</button>
+  </div>
+</mat-card>
 
-<mat-divider></mat-divider>
+
+<!-- <mat-divider></mat-divider>
 <div>
   Salary calculator state:
   <pre>{{ salaryCalculatorService.salaryCalculatorState$ | async | json}}</pre>
-</div>
+</div> -->

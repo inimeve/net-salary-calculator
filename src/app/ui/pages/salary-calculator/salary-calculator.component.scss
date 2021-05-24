@@ -1,0 +1,33 @@
+.data-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 40px;
+
+    width: 530px;
+    height: 550px;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 170px;
+}
+
+.button-container {
+
+}
+
+.form-input {
+    width: 350px
+}
+
+.calculate-button {
+    width: 350px;
+    height: 55px;
+    background: lightgreen;
+}
